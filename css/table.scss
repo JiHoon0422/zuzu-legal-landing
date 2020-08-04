@@ -1,0 +1,67 @@
+@import "./variables";
+.table {
+    margin-top: 2rem;
+    .badge {
+        &-pill {
+            @include body1;
+            padding: 1rem;
+        }
+        &-standard {
+            background-color: #ca4c6c;
+            color: $white;
+        }
+    }
+    thead {
+        tr {
+            th {
+                @include body1;
+                padding: 2rem 0rem;
+                border-bottom: 1px solid #dee2e6;
+                vertical-align: middle;
+                &:not(:first-child) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            th,
+            td {
+                @include body1;
+                vertical-align: middle;
+                &:not(:first-child) {
+                    text-align: center;
+                    background-color: $white;
+                }
+                &:first-child {
+                    background-color: #f4f6fd;
+                }
+                padding: 2rem;
+                ul {
+                    margin-bottom: 0rem;
+                    padding-left: 2rem;
+                    font-weight: 600;
+                    li {
+                        font-weight: 400;
+                        list-style: circle;
+                        list-style-position: inside;
+                        padding: 0.25rem 0rem;
+                    }
+                    .badge {
+                        &-pill,
+                        &-secondary {
+                            font-size: 1.2rem;
+                            border-radius: 0.2rem;
+                            -webkit-border-radius: 0.2rem;
+                            -moz-border-radius: 0.2rem;
+                            -ms-border-radius: 0.2rem;
+                            -o-border-radius: 0.2rem;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

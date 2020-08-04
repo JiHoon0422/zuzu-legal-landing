@@ -1,0 +1,44 @@
+@import "./preloader.scss";
+@import "./header.scss";
+@import "./section";
+@import "./footer";
+@import "./nav";
+@import "./card";
+@import "./button";
+@import "./tab";
+@import "./table.scss";
+html {
+    font-size: 62.5%; //Now 1rem is 10px;
+    scroll-behavior: smooth; // Apply a smooth scroll effect to the page
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    color: unset;
+    &:hover {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+// Prevent downloading the images on the page
+img {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 420px) {
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .hide {
+        display: none;
+    }
+}

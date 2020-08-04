@@ -1,0 +1,145 @@
+@import "./variables";
+// add a default margin value when there are more than one row in a row.
+div.row+div.row {
+    margin-top: 4rem;
+}
+
+section {
+    padding: 3rem 0rem;
+    background-color: $white;
+    &#support {
+        .support {
+            &-card:not(:first-child) {
+                margin-top: 6rem;
+            }
+            &-card {
+                h4 {
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+    }
+    &>.container>.row {
+        align-items: center;
+        justify-content: space-between;
+        &>img {
+            width: 45%;
+            border-radius: 1.3rem;
+        }
+    }
+    .title {
+        @include title;
+        vertical-align: middle;
+        line-height: 1.5;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        img {
+            width: 5rem;
+            mix-blend-mode: multiply;
+        }
+    }
+    .subtitle {
+        @include body1;
+        color: $text-color;
+        line-height: 1.75;
+        font-weight: 400;
+    }
+    .heading3 {
+        @include heading3;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    .paragraph {
+        @include body1;
+        color: $text-color;
+        line-height: 1.75;
+    }
+    .carousel {
+        border-radius: 1.5rem;
+        width: 45%;
+        @extend .elevation-1;
+        background-color: transparent;
+        &-item {
+            background-color: transparent;
+            img {
+                width: 100%;
+                margin: 0px auto;
+                display: flex;
+                pointer-events: none;
+            }
+        }
+        &-indicators {
+            li {
+                background-color: $primary-color;
+            }
+        }
+    }
+    .badge {
+        padding: 1rem 1.5rem;
+        @include caption;
+        border: 1px solid #ededed;
+        border-radius: 0.4rem;
+        margin-top: 1.6rem;
+        color: $text-color;
+    }
+    .badge+.badge {
+        margin-left: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    section {
+        padding: 6rem 0rem;
+        background-color: $white;
+        &>.container>.row {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &>img,
+            &>.carousel {
+                width: 100%;
+                border-radius: 1.3rem;
+                order: 2;
+                margin-top: 2.4rem;
+            }
+            &>.text-wrapper {
+                order: 1;
+            }
+            .disclaimer {
+                order: 3;
+            }
+        }
+        .title {
+            font-size: 2.4rem;
+            vertical-align: middle;
+            line-height: 1.5;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center !important;
+            img {
+                width: 2.4rem;
+            }
+        }
+        .subtitle {
+            @include subtitle2;
+            color: $text-color;
+            line-height: 1.75;
+            font-weight: 400;
+            text-align: center !important;
+        }
+        //Hide every subtitle in every section expert the introduction section.
+        .heading3 {
+            @include heading3;
+            color: $primary-color;
+            font-weight: 400;
+            text-align: center;
+        }
+        .paragraph {
+            @include body1;
+            color: $text-color;
+            line-height: 1.75;
+            font-weight: 400;
+        }
+        // Center images horizontally in the mobile viewport.
+    }
+}

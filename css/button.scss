@@ -1,0 +1,73 @@
+@import "./variables";
+button,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button+button {
+    margin-left: 2rem;
+}
+
+.button-large {
+    padding: 1.8rem 3.6rem;
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    border: none;
+    box-shadow: none;
+    background-color: $white;
+    @include buttonText;
+    img {
+        width: 2rem;
+    }
+}
+
+.button-medium {
+    padding: 0.9rem 1.8rem;
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    border: none;
+    box-shadow: none;
+    background-color: $white;
+    @include body2;
+    font-weight: 500;
+    img {
+        width: 2rem;
+    }
+}
+
+.primary-button {
+    background-color: $primary-color;
+    box-shadow: 0 5px 10px rgba(7, 30, 87, 0.1);
+    transition: all 0.121s ease-in-out;
+    color: $white;
+    &:hover {
+        box-shadow: 0 10px 15px rgba(7, 30, 87, 0.15);
+    }
+}
+
+.secondary-button {
+    color: $primary-color;
+    box-shadow: 0 5px 10px rgba(7, 30, 87, 0.1);
+    transition: all 0.121s ease-in-out;
+    &:hover {
+        box-shadow: 0 10px 15px rgba(7, 30, 87, 0.15);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    button+button {
+        margin-top: 2rem;
+        margin-left: 0rem;
+    }
+    .button-large {
+        width: 100%;
+        text-align: center;
+    }
+}

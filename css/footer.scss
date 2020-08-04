@@ -1,0 +1,38 @@
+footer {
+    padding: 7rem 0rem;
+    background-color: #202b35;
+    color: white;
+    font-size: 1.4rem;
+    a {
+        color: rgba(255, 255, 255, 0.64);
+        transition: color 0.121s ease-out;
+        &:hover {
+            color: white;
+        }
+    }
+    p {
+        color: rgba(255, 255, 255, 0.64);
+    }
+    .slogan {
+        margin-top: 1.6rem;
+        line-height: 1.75;
+    }
+    .category-title {
+        margin-bottom: 2rem;
+    }
+    &>.container>div:nth-child(2) {
+        margin: 2rem 0rem 5rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    footer {
+        padding: 2rem 0rem;
+        .col-md-4 {
+            margin-top: 2rem;
+        }
+        .category-title {
+            margin-bottom: 1rem;
+        }
+    }
+}

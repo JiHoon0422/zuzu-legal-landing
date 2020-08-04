@@ -1,0 +1,55 @@
+@import "./variables";
+.card-wrapper {
+    margin-top: 4rem;
+    padding-bottom: 12rem;
+    .card {
+        border: none;
+        @extend .elevation-1;
+        border-radius: 1.5rem;
+        a {
+            background-color: $primary-color;
+            @include body2;
+            border: none;
+            margin-top: 1.6rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.5rem;
+        }
+    }
+    .card+.card {
+        margin-left: 2.4rem;
+    }
+    .card:not(.agenda-card) {
+        padding: 2rem;
+        img {
+            margin-right: 1.2rem;
+            width: 60%;
+            margin: 0px auto;
+        }
+        .card-body {
+            .card-title {
+                @include subtitle2;
+                font-weight: 400;
+                color: $subtitle-color;
+            }
+            .card-text {
+                @include body2;
+                margin-top: 1rem;
+                color: $text-color;
+            }
+        }
+        transition: box-shadow 0.224s ease-in-out;
+        -webkit-transition: box-shadow 0.224s ease-in-out;
+        -moz-transition: box-shadow 0.224s ease-in-out;
+        -ms-transition: box-shadow 0.224s ease-in-out;
+        -o-transition: box-shadow 0.224s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-wrapper {
+        margin-top: 4rem;
+        .col-md-4 {
+            margin-top: 2rem;
+        }
+    }
+}

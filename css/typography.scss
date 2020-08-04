@@ -1,0 +1,49 @@
+@import "./variables";
+// typography
+@mixin display {
+    font-size: 7.2rem;
+    font-weight: 900;
+    letter-spacing: -0.02;
+}
+
+@mixin title {
+    font-size: $title;
+    font-weight: 500;
+    letter-spacing: -0.01;
+}
+
+@mixin subtitle1 {
+    font-size: $subtitle1;
+    font-weight: 500;
+    letter-spacing: -0.01;
+}
+
+@mixin subtitle2 {
+    font-size: $subtitle2;
+    font-weight: 500;
+    letter-spacing: -0.01;
+}
+
+// TODO: Add heading1.
+@mixin heading2 {
+    font-size: $heading2;
+    font-weight: 500;
+    letter-spacing: -0.01;
+}
+
+@mixin body1 {
+    font-size: $body1;
+    font-weight: 400;
+    letter-spacing: -0.01;
+}
+
+@mixin body2 {
+    font-size: $body2;
+    font-weight: 400;
+    letter-spacing: -0.01;
+}
+
+@mixin caption {
+    font-size: $caption;
+    font-weight: 400;
+}
